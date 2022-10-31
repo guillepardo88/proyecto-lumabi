@@ -1,0 +1,15 @@
+@import "./base/reset";
+@import "./base/grid-main";
+@import "./base/grid-productos";
+@import "./base/grid-galeria";
+
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./components/bootstrap";
+
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+@import "./layout/productos";
+@import "./layout/somos";
+@import "./layout/galeria";

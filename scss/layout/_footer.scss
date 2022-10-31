@@ -1,0 +1,26 @@
+.redes li{
+    list-style: none;
+
+    & a{
+        display: flex;
+    }
+}
+
+footer{
+    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
+    grid-area: footer;
+
+    & ul{
+        display: flex;
+        align-items: center;
+        margin-left: 520px;
+    
+        & li{
+            margin: 20px;
+            list-style: none;
+        }
+    }
+}
+
+
+

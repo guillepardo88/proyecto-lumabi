@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-lumabi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillepardo88/proyecto-lumabi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillepardo88/proyecto-lumabi/issues"
+  },
+  "homepage": "https://github.com/guillepardo88/proyecto-lumabi#readme"
+}

@@ -1,886 +1,273 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 100px;
-    grid-template-areas: 
-    "header header header"
-    "main main aside"
-    "main main aside"
-    "main main aside"
-    "footer footer footer"
-    ;
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 1fr 100px;
+  grid-template-areas: "header header header" "main main aside" "main main aside" "main main aside" "footer footer footer";
 }
 
-.container-productos{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 100px;
-    grid-template-areas: 
-    "header"
-    "main"    
-    "footer"
-    ;
+.container-productos {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas: "header" "main" "footer";
 }
 
-header{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-    grid-area: header;
-    display: inline-flex;
+.container-galeria {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr 100px;
+  grid-template-areas: "header header header" "main main main" "main main main" "main main main" "main main main" "main main main" "footer footer footer";
 }
 
-.logo{
-    max-width: 100px;
-    max-height: 100px;
+.container-fotos {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "foto1 none" "none foto2" "foto3 none" "none foto4";
 }
 
-.logo a img{
-    max-width: 75px;
-    max-height: 75px;
-    margin-top: 10px;
-    margin-left: 15px;
-    border-radius: 50%;
+.container-form {
+  margin-top: 50px;
+  margin-left: 350px;
+  max-width: 50%;
+}
+
+.boton {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
-
-.navBar{
-    display: flex;
-    align-content: center;
-    margin-top: 45px;
-    margin-left: 380px;
-}
-
-.navBar li{
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.navBar li a{
-    color: black;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px; 
-    margin-right: 30px;
-}
-
-/*seccion index.html*/
-
-main{
-    grid-area: main;
-}
-
-h1{
-    font-size: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.articuloPrimero{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 80px;
-    width: 75%;
-    margin-left: 90px;
-}
-
-.articuloPrimero img{
-    max-width: 300px;
-    max-height: 300px;
-    margin-top: 30px;
-}
-
-.articuloSegundo{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 50px;
-    width: 75%;
-    margin-left: 90px;
-}
-
-.articuloSegundo img{
-    max-width: 300px;
-    max-height: 300px;
-    margin-top: 30px;
-}
-
-h2{
-    font-size: 40px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 20px;
-}
-
-aside{
-    border-style: dotted;
-    border-width: 5px;
-    border-color: black yellowgreen blueviolet turquoise;
-    grid-area: aside;
-    max-width: 400px;
-    max-height: 500px;
-    margin-top: 150px;
-    margin-left: 3px;
-
-}
-
-.recetas{
-    text-align: center;
-    border: 1px;
-    margin-top: 20px;
-    font-size: 20px;
-}
-
-.recetas img{
-    max-width: 300px;
-    max-height: 300px;
-    margin-top: 35px;
-}
-
-/*seccion productos*/
-
-.tortas{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    max-width: 75%;
-    margin-left: 150px;
-}
-
-.tortas h2{
-    margin-bottom: 25px;
-}
-.tortas img{
-    max-width: 400px;
-    max-height: 400px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-left: 330px;
-}
-
-.catering{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    max-width: 75%;
-    margin-left: 150px;
-}
-
-.catering h2{
-    margin-bottom: 25px;
-}
-.catering img{
-    max-width: 400px;
-    max-height: 400px;
-    display: flex;
-    margin-left: 330px;
-    margin-top: 30px;
-}
-
-/*seccion footer*/
-
-.redes li{
-    list-style: none;
-}
-
-.redes li a{
-    display: flex;
-}
-
-footer{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-    grid-area: footer;
-}
-
-footer ul{
-    display: flex;
-    align-items: center;
-    margin-left: 520px;
-}
-
-footer ul li{
-    margin: 20px;
-    list-style: none;
-}
-
-/*seccion quienes somos*/
-
-.somos p{
-    font-size: 30px;
-    margin-top: 25px;
-    margin-bottom: 35px;
-    margin-left: 150px;
-    max-width: 75%;
-    display: flex;
-    text-align: center;
-}
-
-.container-form{
-    margin-top: 50px;    
-    margin-left: 350px;
-    max-width: 50%;
-}
-
-.boton{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-
-/*seccion galeria*/
-
-.container-galeria{
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr 100px;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "main main main"
-    "main main main"
-    "main main main"
-    "main main main"
-    "footer footer footer"
-    ;
-}
-
-.container-fotos{
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
-    grid-template-areas:
-    "foto1 none"
-    "none foto2"
-    "foto3 none"
-    "none foto4"
-    ;
-}
-
-.foto{
-    max-width: 150px;
-    max-height: 150px;
-    box-shadow: 2px 2px 5px dimgrey ;
-}
-
-.foto-1{
-    transition: transform 900ms;
-    grid-column-start: 2;
-    margin-top: 50px;
-}
-
-.foto-1:hover{
-    transform: scale(1.2);
-}
-
-.foto-2{
-    transition: transform 900ms;
-    grid-column-start: 3;
-    grid-row-start: 2;
-}
-
-.foto-2:hover{
-    transform: scale(1.2);
-}
-
-.foto-3{
-    transition: transform 900ms;
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-
-.foto-3:hover{
-    transform: scale(1.2);
-}
-
-.foto-4{
-    transition: transform 900ms;
-    grid-column-start: 3;
-    grid-row-start: 4;
-    margin-bottom: 50px;
-}
-
-.foto-4:hover{
-    transform: scale(1.2);
-}
-
-/*aca comienza media querie para tablet del index.html*/
-
-@media (max-width: 768px){
-    .container{
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1fr 1fr 80px;
-        grid-template-areas: 
-        "header header "
-        "main main aside"
-        "main main aside"
-        "footer footer footer"
-        ;
-    }
-
-.header{
-        background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-        grid-area: header;
-        display: inline-flex;
-}
-
-.logo{
-    max-width: 80px;
-    max-height: 80px;
-}
-
-.logo a img{
-    max-width: 65px;
-    max-height: 65px;
-    margin-top: 6px;
-    margin-left: 15px;
-    border-radius: 50%;
-}
-
-.navBar{
-    display: flex;
-    align-content: center;
-    margin-top: 30px;
-    margin-left: 220px;
-}
-
-.navBar li{
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.navBar li a{
-    color: black;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px; 
-    margin-right: 30px;
-}
-
-.main{
-    grid-area: main;
-}
-
-h1{
-    font-size: 35px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.articuloPrimero{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 80px;
-    width: 75%;
-    margin-left: 30px;
-}
-
-.articuloPrimero img{
-    max-width: 200px;
-    max-height: 200px;
-    margin-top: 30px;
+
+header {
+  background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
+  grid-area: header;
+  display: inline-flex;
+}
+
+.logo {
+  max-width: 100px;
+  max-height: 100px;
 }
-
-.articuloSegundo{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 50px;
-    width: 75%;
-    margin-left: 30px;
-}
-
-.articuloSegundo img{
-    max-width: 200px;
-    max-height: 200px;
-    margin-top: 30px;
-}
-
-h2{
-    font-size: 28px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 20px;
-}
-
-aside{
-    border-style: dotted;
-    border-width: 5px;
-    border-color: rgb(180, 25, 25) rgb(51, 128, 48) rgb(76, 40, 109) rgb(10, 232, 240);
-    grid-area: aside;
-    max-width: 300px;
-    max-height: 400px;
-    margin-top: 100px;
-    margin-right: 30px;
-
-}
-
-.recetas{
-    text-align: center;
-    border: 1px;
-    margin-top: 20px;
-    font-size: 15px;
-}
-
-.recetas img{
-    max-width: 200px;
-    max-height: 200px;
-    margin-top: 35px;
-}
-
-footer{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-    grid-area: footer;
-}
-
-footer ul{
-    display: flex;
-    align-items: center;
-    margin-left: 255px;
-}
-
-footer ul li{
-    margin: 20px;
-    list-style: none;
-}
-
-.redes img{
-    max-width: 40px;
-    max-height: 40px;
-}
-}
-
-/*aca comienza media querie para celular del index.html*/
-
-@media (max-width: 576px){
-    .container{
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px 1fr 1fr 60px;
-        grid-template-areas: 
-        "header"
-        "main"
-        "aside"
-        "footer"
-        ;
-    }
-
-.header{
-        background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-        grid-area: header;
-        display: inline-flex;
-}
-
-.logo{
-    max-width: 60px;
-    max-height: 60px;
-}
-
-.logo a img{
-    max-width: 55px;
-    max-height: 55px;
-    margin-top: 2px;
-    margin-left: 10px;
-    border-radius: 50%;
-}
-
-.navBar{
-    align-content: center;
-    margin-top: 22px;
-    margin-left: 195px;
-}
-
-.navBar li{
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.navBar li a{
-    color: black;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 60px; 
-    margin-right: 0px;
-}
-
-.main{
-    grid-area: main;
-}
-
-h1{
-    font-size: 28px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 45px;
-}
-
-.articuloPrimero{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    width: 80%;
-    margin-left: 55px;
-}
-
-.articuloPrimero img{
-    max-width: 150px;
-    max-height: 150px;
-    margin-top: 30px;
-}
-
-.articuloSegundo{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-bottom: 10px;
-    width: 80%;
-    margin-left: 55px;
-}
-
-.articuloSegundo img{
-    max-width: 150px;
-    max-height: 150px;
-    margin-top: 30px;
-}
-
-h2{
-    font-size: 24px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 40px;
+.logo a img {
+  max-width: 75px;
+  max-height: 75px;
+  margin-top: 10px;
+  margin-left: 15px;
+  border-radius: 50%;
 }
 
-aside{
-    border-style: dotted;
-    border-width: 5px;
-    border-color: rgb(12, 13, 122) rgb(83, 248, 17) rgb(230, 24, 219) rgb(4, 190, 113);
-    grid-area: aside;
-    max-width: 500px;
-    max-height: 385px;
-    margin-top: 70px;
-    margin-left: 35px;
+.navBar {
+  display: flex;
+  align-content: center;
+  margin-top: 45px;
+  margin-left: 380px;
 }
-
-.recetas{
-    text-align: center;
-    border: 1px;
-    margin-top: 30px;
-    font-size: 15px;
-}
-
-.recetas img{
-    max-width: 150px;
-    max-height: 150px;
-    margin-top: 45px;
-}
-
-footer{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-    grid-area: footer;
-}
-
-footer ul{
-    display: flex;
-    align-items: center;
-    margin-left: 190px;
-}
-
-footer ul li{
-    list-style: none;
-    margin-bottom: 0px;
-}
-
-.redes img{
-    max-width: 30px;
-    max-height: 30px;
-}
-}
-
-/*aca empieza el media querie para tablet de la seccion "productos"*/
-
-@media(max-width: 768px){
-
-    .container-productos{
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 80px 1fr 80px;
-        grid-template-areas: 
-        "header"
-        "main"    
-        "footer"
-        ;
-    }
-
-.header{
-        background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-        grid-area: header;
-        display: inline-flex;
-}
-
-.logo{
-    max-width: 80px;
-    max-height: 80px;
-}
-
-.logo a img{
-    max-width: 65px;
-    max-height: 65px;
-    margin-top: 6px;
-    margin-left: 15px;
-    border-radius: 50%;
-}
-
-.navBar{
-    display: flex;
-    align-content: center;
-    margin-top: 30px;
-    margin-left: 220px;
-}
-
-.navBar li{
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
+.navBar li {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-
-.navBar li a{
-    color: black;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px; 
-    margin-right: 30px;
-}
-
-main{
-    grid-area: main;
-}
-
-h1{
-    font-size: 35px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.tortas{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 80px;
-}
-
-.tortas h2{
-    margin-bottom: 25px;
-}
-.tortas img{
-    max-width: 200px;
-    max-height: 200px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-left: 200px;
-    margin-bottom: 60px;
+.navBar li a {
+  color: black;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-right: 30px;
 }
 
-.catering{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin-left: 80px;
+main {
+  grid-area: main;
 }
 
-.catering h2{
-    margin-bottom: 25px;
-}
-.catering img{
-    max-width: 200px;
-    max-height: 200px;
-    display: flex;
-    margin-left: 200px;
-    margin-top: 50px;
+h1 {
+  font-size: 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin-top: 50px;
 }
-
-footer{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-    grid-area: footer;
+
+.articuloPrimero {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  width: 75%;
+  margin-left: 90px;
+}
+.articuloPrimero img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 30px;
+}
+
+.articuloSegundo {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 75%;
+  margin-left: 90px;
+}
+.articuloSegundo img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+aside {
+  border-style: dotted;
+  border-width: 5px;
+  border-color: black yellowgreen blueviolet turquoise;
+  grid-area: aside;
+  max-width: 400px;
+  max-height: 500px;
+  margin-top: 150px;
+  margin-left: 3px;
+}
+
+.recetas {
+  text-align: center;
+  border: 1px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.recetas img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 35px;
+}
+
+.redes li {
+  list-style: none;
+}
+.redes li a {
+  display: flex;
 }
 
-footer ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5px;
+footer {
+  background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
+  grid-area: footer;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  margin-left: 520px;
 }
-
-footer ul li{
-    margin-bottom: 0px;
-    list-style: none;
+footer ul li {
+  margin: 20px;
+  list-style: none;
 }
 
-.redes img{
-    max-width: 40px;
-    max-height: 40px;
-}
+.tortas {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  max-width: 75%;
+  margin-left: 150px;
 }
-
-/*aca empieza empieza el media querie para celular seccion "productos"*/
-
-@media(max-width: 576px){
-
-    .container-productos{
-        display: grid;
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 60px 1fr 60px;
-        grid-template-areas: 
-        "header"
-        "main"    
-        "footer"
-        ;
-    }
-
-.header{
-        background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-        grid-area: header;
-        display: inline-flex;
+.tortas h2 {
+  margin-bottom: 25px;
 }
-
-.logo{
-    max-width: 60px;
-    max-height: 60px;
+.tortas img {
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 330px;
 }
 
-.logo a img{
-    max-width: 55px;
-    max-height: 55px;
-    margin-top: 2px;
-    margin-left: 10px;
-    border-radius: 50%;
+.catering {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 75%;
+  margin-left: 150px;
 }
-
-.navBar{
-    display: flex;
-    align-content: center;
-    margin-top: 22px;
-    margin-left: 195px;
+.catering h2 {
+  margin-bottom: 25px;
 }
-
-.navBar li{
-    display: inline-flex;
-    justify-content: flex-end;
-    align-items: center;
+.catering img {
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  margin-left: 330px;
+  margin-top: 30px;
 }
 
-.navBar li a{
-    color: black;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px; 
-    margin-right: 20px;
+.somos p {
+  font-size: 30px;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  margin-left: 150px;
+  max-width: 75%;
+  display: flex;
+  text-align: center;
 }
 
-.main{
-    grid-area: main;
+.foto {
+  max-width: 150px;
+  max-height: 150px;
+  box-shadow: 2px 2px 5px dimgrey;
 }
 
-h1{
-    font-size: 28px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    margin-top: 45px;
+.foto-1 {
+  transition: transform 900ms;
+  grid-column-start: 2;
+  margin-top: 50px;
 }
-
-.tortas{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 65px;
+.foto-1:hover {
+  transform: scale(1.2);
 }
 
-.tortas h2{
-    margin-bottom: 25px;
-}
-.tortas img{
-    max-width: 150px;
-    max-height: 150px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-left: 150px;
-    margin-bottom: 60px;
+.foto-2 {
+  transition: transform 900ms;
+  grid-column-start: 3;
+  grid-row-start: 2;
 }
-
-.catering{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    margin-left: 65px;
+.foto-2:hover {
+  transform: scale(1.2);
 }
 
-.catering h2{
-    margin-bottom: 25px;
-}
-.catering img{
-    max-width: 150px;
-    max-height: 150px;
-    display: flex;
-    margin-left: 150px;
-    margin-top: 50px;
+.foto-3 {
+  transition: transform 900ms;
+  grid-column-start: 2;
+  grid-row-start: 3;
 }
-
-footer{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
-    grid-area: footer;
+.foto-3:hover {
+  transform: scale(1.2);
 }
 
-footer ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5px;
+.foto-4 {
+  transition: transform 900ms;
+  grid-column-start: 3;
+  grid-row-start: 4;
+  margin-bottom: 50px;
 }
-
-footer ul li{
-    margin-bottom: 0px;
-    list-style: none;
+.foto-4:hover {
+  transform: scale(1.2);
 }
 
-.redes img{
-    max-width: 30px;
-    max-height: 30px;
-}
-}
-/*fin?*/
+/*# sourceMappingURL=style.css.map */

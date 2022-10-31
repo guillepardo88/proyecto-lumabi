@@ -1,0 +1,73 @@
+main{
+    grid-area: main;
+}
+
+h1{
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.articuloPrimero{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    width: 75%;
+    margin-left: 90px;
+
+    & img{
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 30px;
+    }
+}
+
+.articuloSegundo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    width: 75%;
+    margin-left: 90px;
+
+    & img{
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 30px;
+    }
+}
+
+h2{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+aside{
+    border-style: dotted;
+    border-width: 5px;
+    border-color: black yellowgreen blueviolet turquoise;
+    grid-area: aside;
+    max-width: 400px;
+    max-height: 500px;
+    margin-top: 150px;
+    margin-left: 3px;
+}
+
+.recetas{
+    text-align: center;
+    border: 1px;
+    margin-top: 20px;
+    font-size: 20px;
+
+    & img{
+        max-width: 300px;
+        max-height: 300px;
+        margin-top: 35px;
+    }
+}
+
