@@ -16,13 +16,13 @@
 
 .container-fotos{
     display: grid;
-    width: 100%;
+    width: 80%;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(4,1fr);
     grid-template-areas:
-    "foto1 none"
-    "none foto2"
-    "foto3 none"
-    "none foto4"
+    "foto1 none none"
+    "none foto2 none"
+    "foto3 none none"
+    "none foto4 none"
     ;
 }

@@ -1,0 +1,316 @@
+@media (max-width: 576px){
+    .container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 1fr 1fr 60px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer"
+        ;
+    }
+
+    .container-productos{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 1fr 60px;
+        grid-template-areas: 
+        "header"
+        "main"    
+        "footer"
+        ;
+    }
+
+    .container-galeria{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 60px 1fr 1fr 1fr 1fr 1fr 60px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "footer"
+        ;
+    }
+
+    .container-fotos{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-template-areas:
+        "foto1"
+        "foto2"
+        "foto3"
+        "foto4"
+        ;
+    }
+
+    header{
+        background: $background-header;
+        grid-area: header;
+        display: inline-flex;
+    }
+    
+    .logo{
+        max-width: 60px;
+        max-height: 60px;
+    
+        & a img{
+            @include medidas(50px,50px,3px);
+            margin-left: 3px;
+            border-radius: 50%;
+        }
+    }
+    
+    .navBar{
+        display: flex;
+        align-content: center;
+        margin-top: 20px;
+        margin-left: 80px;
+    
+        & li{
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+    
+            & a{
+                color: black;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px; 
+                margin-right: 30px;
+            }
+        }
+    }
+
+    main{
+        grid-area: main;
+    }
+    
+    h1{
+        font-size: 30px;
+        font-family: $fuentes-h1;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .articuloPrimero{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        width: 75%;
+        margin-left: 70px;
+    
+        & img{
+            max-width: 120px;
+            max-height: 120px;
+            margin-top: 30px;
+        }
+    }
+    
+    .articuloSegundo{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 75%;
+        margin-left: 70px;
+    
+        & img{
+            max-width: 120px;
+            max-height: 120px;
+            margin-top: 30px;
+        }
+    }
+    
+    h2{
+        font-size: 25px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    aside{
+        border-style: dotted;
+        border-width: 5px;
+        border-color: black yellowgreen blueviolet turquoise;
+        grid-area: aside;
+        max-width: 300px;
+        max-height: 350px;
+        margin-top: 90px;
+        margin-left: 140px;
+    }
+    
+    .recetas{
+        text-align: center;
+        border: 1px;
+        margin-top: 20px;
+        font-size: 17px;
+    
+        & img{
+            max-width: 120px;
+            max-height: 120px;
+            margin-top: 35px;
+        }
+    }
+
+    .redes li{
+        list-style: none;
+    
+        & a{
+            display: flex;
+        }
+    }
+    
+    footer{
+        background: $background-header;
+        grid-area: footer;
+        margin-bottom: 0px;
+    
+        & ul{
+            display: flex;
+            align-items: center;
+            margin-left: 175px;
+        
+            & li{
+                margin: 20px;
+                list-style: none;
+            }
+        }
+    }
+
+    .redes li a img{
+        max-width: 28px;
+    }
+
+    .foto{
+        @include medidas(120px,120px,none);
+        box-shadow: 2px 2px 5px dimgrey;
+    }
+    
+    .foto-1{
+        transition: transform 900ms;
+        grid-column-start: 1;
+        margin-left: 200px;
+        margin-bottom: 100px;
+    
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    
+    .foto-2{
+        transition: transform 900ms;
+        grid-column-start: 1;
+        margin-left: 200px;
+        grid-row-start: 2;
+    
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    
+    .foto-3{
+        transition: transform 900ms;
+        grid-column-start: 1;
+        grid-row-start: 3;
+        margin-left: 200px;
+        margin-top: 0px;
+    
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    
+    .foto-4{
+        transition: transform 900ms;
+        grid-column-start: 1;
+        margin-left: 200px;
+        grid-row-start: 4;
+        margin-bottom: 50px;
+    
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    .tortas{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        max-width: 75%;
+        margin-left: 65px;
+    
+        & h2{
+            margin-bottom: 25px;
+        }
+    
+        & img{
+            max-width: 120px;
+            max-height: 120px;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-left: 160px;
+        }
+    }
+    
+    .catering{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 13px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        max-width: 75%;
+    
+        & h2{
+            margin-bottom: 25px;
+        }
+    
+        & img{
+            max-width: 120px;
+            max-height: 120px;
+            display: flex;
+            margin-left: 160px;
+            margin-top: 30px;
+        }
+    }
+
+    .somos p{
+        font-size: 13px;
+        margin-top: 40px;
+        margin-bottom: 440px;
+        margin-left: 70px;
+        max-width: 75%;
+        display: flex;
+        text-align: center;
+    }
+
+    .container-form{
+        margin-top: 80px;    
+        margin-left: 140px;
+        max-width: 50%;
+    }
+    
+    .boton{
+        display: flex;
+        margin-top: 50px;
+        margin-bottom: 155px;
+        align-content: center;
+        justify-content: center;
+    }
+
+}

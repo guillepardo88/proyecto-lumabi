@@ -1,12 +1,12 @@
-.foto{
-    max-width: 150px;
-    max-height: 150px;
-    box-shadow: 2px 2px 5px dimgrey ;
+.container-fotos .foto{
+    @include medidas(300px,300px,none);
+    box-shadow: 2px 2px 5px dimgrey;
 }
 
 .foto-1{
     transition: transform 900ms;
-    grid-column-start: 2;
+    grid-column-start: 1;
+    margin-left: 150px;
     margin-top: 50px;
 
     &:hover{
@@ -26,8 +26,9 @@
 
 .foto-3{
     transition: transform 900ms;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-row-start: 3;
+    margin-left: 150px;
 
     &:hover{
         transform: scale(1.2);

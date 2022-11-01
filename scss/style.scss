@@ -1,9 +1,10 @@
+@import "./utilities/variables";
 @import "./base/reset";
 @import "./base/grid-main";
 @import "./base/grid-productos";
 @import "./base/grid-galeria";
 
-@import "./utilities/variables";
+
 @import "./utilities/mixins";
 @import "./components/bootstrap";
 
@@ -13,3 +14,6 @@
 @import "./layout/productos";
 @import "./layout/somos";
 @import "./layout/galeria";
+@import "./layout/_media-notebook";
+@import "./layout/media-tablet";
+@import "./layout/media-celular";

@@ -7,13 +7,13 @@
 }
 
 footer{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
+    background: $background-header;
     grid-area: footer;
 
     & ul{
         display: flex;
         align-items: center;
-        margin-left: 520px;
+        margin-left: 450px;
     
         & li{
             margin: 20px;

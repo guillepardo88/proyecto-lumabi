@@ -1,5 +1,5 @@
 header{
-    background: linear-gradient(to left, aqua, rgb(140, 223, 223), rgba(196, 224, 224, 0.705));
+    background: $background-header;
     grid-area: header;
     display: inline-flex;
 }
@@ -9,9 +9,7 @@ header{
     max-height: 100px;
 
     & a img{
-        max-width: 75px;
-        max-height: 75px;
-        margin-top: 10px;
+        @include medidas(75px,75px,10px);
         margin-left: 15px;
         border-radius: 50%;
     }

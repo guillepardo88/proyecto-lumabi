@@ -1,0 +1,5 @@
+@mixin medidas ($width,$height,$margin-top) {
+    max-width: $width;
+    max-height: $height;
+    margin-top: $margin-top;
+}
